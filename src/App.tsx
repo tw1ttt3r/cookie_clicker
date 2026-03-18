@@ -1,8 +1,8 @@
+import MainWrapper from "@components/mainWrapper/MainWrapper"
+
 function App() {
   return (
-    <div>
-      <h1>Cookie Clicker</h1>
-    </div>
+    <MainWrapper />
   )
 }
 
