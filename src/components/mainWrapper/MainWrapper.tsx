@@ -12,8 +12,8 @@ function MainWrapper({ children }: MainWrapperType) {
         className="mobile:min-w-130 mobile:max-w-140 tablet:min-w-160 tablet:max-w-170 desktop:max-w-270 desktop:min-w-260 xxl:max-w-300 xxl:mix-w-290 border bg-amber-600"
       >
         { children }
-        <Version />
       </section>
+      <Version />
     </main>
   )
 }
