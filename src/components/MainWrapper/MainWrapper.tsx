@@ -1,0 +1,21 @@
+import type { ReactNode } from "react"
+import Version from "@components/Version/Version";
+
+type MainWrapperType = {
+  children?: ReactNode
+}
+
+function MainWrapper({ children }: MainWrapperType) {
+  return (
+    <main className="mainWrapper">
+      <section
+        className="mobile:min-w-20 mobile:max-w-140 tablet:min-w-160 tablet:max-w-170 desktop:max-w-270 desktop:min-w-260 xxl:max-w-300 xxl:mix-w-290 mainWrapper-2nd-level"
+      >
+        { children }
+      </section>
+      <Version />
+    </main>
+  )
+}
+
+export default MainWrapper;
