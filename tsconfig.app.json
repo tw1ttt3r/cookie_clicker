@@ -25,9 +25,12 @@
     "noUncheckedSideEffectImports": true,
 
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"]
-    }
+      "@/*": ["./*"],
+      "@src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@_config/*": ["./src/config/*"]
+    },
+    "resolveJsonModule": true
   },
   "include": ["src"]
 }
