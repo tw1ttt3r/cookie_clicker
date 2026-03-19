@@ -1,8 +1,4 @@
 @import "tailwindcss";
 
-@theme {
-  --breakpoint-mobile: 30rem;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-desktop: 75rem;
-  --breakpoint-xxl: 80rem;
-}
+@import "./styles/theme.css";
+@import "./styles/utilities.css";
