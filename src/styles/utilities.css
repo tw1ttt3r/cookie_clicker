@@ -1,0 +1,19 @@
+@utility mainWrapper {
+  @apply w-dvw px-3 h-dvh rounded relative flex justify-center;
+}
+
+@utility mainWrapper-2nd-level {
+  @apply border bg-amber-600;
+}
+
+@utility version {
+  @apply absolute p-0.5 flex justify-center bottom-2 right-2;
+}
+
+@utility cookieWrapper {
+  @apply px-1 w-full h-full flex justify-center items-center relative;
+}
+
+@utility cookieWrapper-text {
+  @apply text-xs text-gray-300;
+}

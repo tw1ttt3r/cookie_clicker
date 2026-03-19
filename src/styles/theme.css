@@ -1,0 +1,6 @@
+@theme {
+  --breakpoint-mobile: 0rem;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-desktop: 75rem;
+  --breakpoint-xxl: 80rem;
+}

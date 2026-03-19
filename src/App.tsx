@@ -1,4 +1,4 @@
-import MainWrapper from "@components/mainWrapper/MainWrapper"
+import MainWrapper from "@/src/components/MainWrapper/MainWrapper"
 import Cookie from "@components/Cookie/Cookie"
 
 function App() {
