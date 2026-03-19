@@ -17,3 +17,7 @@
 @utility cookieWrapper-text {
   @apply text-xs text-gray-300;
 }
+
+@utility cookie-spin {
+  animation: spin 30s linear infinite;
+}
