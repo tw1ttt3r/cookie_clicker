@@ -1,5 +1,8 @@
 import { version } from "@/package.json"
 
+const local_storage = import.meta.env.VITE_COOKIE_DATA
+
 export {
-  version
+  version,
+  local_storage
 }
