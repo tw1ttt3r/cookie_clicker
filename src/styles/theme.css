@@ -3,4 +3,7 @@
   --breakpoint-tablet: 40rem;
   --breakpoint-desktop: 75rem;
   --breakpoint-xxl: 80rem;
+
+  --font-roboto: "Roboto", sans-serif;
+  --font-datatype: "Datatype", sans-serif;
 }
