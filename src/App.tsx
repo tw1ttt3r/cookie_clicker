@@ -5,12 +5,12 @@ import { CookieProvider } from "@_config/context/CookieContext"
 
 function App() {
   return (
-    <MainWrapper>
-      <CookieProvider>
+    <CookieProvider>
+      <MainWrapper>
         <Counter />
         <Cookie />
-      </CookieProvider>
-    </MainWrapper>
+      </MainWrapper>
+    </CookieProvider>
   )
 }
 

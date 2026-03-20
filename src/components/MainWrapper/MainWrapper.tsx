@@ -1,11 +1,30 @@
-import type { ReactNode } from "react"
+import { useContext, useEffect, type ReactNode } from "react"
 import Version from "@components/Version/Version"
+import { CookieContext } from "@_config/context/CookieContext"
+import {  useBeforeClose} from "@_config/hooks/useBeforeClose"
 
 type MainWrapperType = {
   children?: ReactNode
 }
 
 function MainWrapper({ children }: MainWrapperType) {
+
+  const context = useContext(CookieContext)
+
+  if (!context) {
+    throw new Error("CookieContext no está disponible");
+  }
+
+  const { loadStorage, saveStorage } = context;
+
+  useBeforeClose(() => {
+    saveStorage()
+  });
+
+  useEffect(() => {
+    loadStorage()
+  }, [])
+
   return (
     <main className="mainWrapper">
       <section
