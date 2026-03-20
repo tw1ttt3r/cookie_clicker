@@ -1,11 +1,14 @@
 import { createContext, useState } from "react"
 import type { ReactNode } from "react"
+import { local_storage } from "@_config/vars"
 
 type CookieContextType = {
   accumulated: number,
   lastAccumulated: number,
   registerAccumulated: () => void,
-  registerLastAccumulated?: () => void
+  registerLastAccumulated?: () => void,
+  loadStorage: () => void,
+  saveStorage: () => void
 }
 
 const CookieContext = createContext<CookieContextType | undefined>(undefined)
@@ -28,9 +31,24 @@ const CookieProvider = ({ children }: CookieProviderType) => {
     setLastAccumulated(Date.now());
   }
 
+  const loadStorage = () => {
+    if(!localStorage.getItem(local_storage)) {
+      return
+    }
+    
+    const { accumulated, lastAccumulated } = 
+      JSON.parse(localStorage.getItem(local_storage)!);
+
+    setAccumulated(accumulated);
+    setLastAccumulated(lastAccumulated);
+  }
+
+  const saveStorage = () => {
+    localStorage.setItem(local_storage, JSON.stringify({ accumulated, lastAccumulated }))
+  }
   return (
     <CookieContext.Provider
-      value={{ accumulated, registerAccumulated, lastAccumulated }}
+      value={{ accumulated, registerAccumulated, lastAccumulated, loadStorage, saveStorage }}
     >
       {children}
     </CookieContext.Provider>
