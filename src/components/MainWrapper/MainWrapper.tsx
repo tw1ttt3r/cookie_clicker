@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import Version from "@components/Version/Version";
+import Version from "@components/Version/Version"
 
 type MainWrapperType = {
   children?: ReactNode

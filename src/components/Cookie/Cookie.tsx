@@ -1,4 +1,5 @@
-import { useCookieContext } from "@_config/hooks/useCookieContext";
+import { useCookieContext } from "@_config/hooks/useCookieContext"
+import cookie from "@src/assets/cookie.png"
 
 function Cookie() {
 
@@ -10,7 +11,7 @@ function Cookie() {
     <div className="cookieWrapper">
       <img
         onClick={handlerClic}
-        src="./cookie.png"
+        src={cookie}
         className="mobile:w-[65%] tablet:w-[60%] desktop:w-[50%] cookie-spin cursor-pointer"
       />
     </div>
