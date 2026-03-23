@@ -2,25 +2,28 @@ import IconHandler from "@components/IconHandler/IconHandler";
 import { useState } from "react"
 import { cn } from "@_config/helpers/cn"
 import Version from "@components/Version/Version"
+import { useCookieContext } from "@_config/hooks/useCookieContext";
 
 function Options() {
+
+  const { resetStorage, downloadStorage, uploadStorage } = useCookieContext()
 
   const [ visibility, setVisibility ] = useState<boolean>(false);
 
   const handleClic = () => setVisibility(p => !p)
 
   const download = () => {
-    alert("download")
+    downloadStorage()
     handleClic()
   }
 
   const upload = () => {
-    alert("upload")
+    uploadStorage()
     handleClic()
   }
 
   const reset = () => {
-    alert("reset")
+    resetStorage()
     handleClic()
   }
 
