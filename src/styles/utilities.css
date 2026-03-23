@@ -1,3 +1,7 @@
+* {
+  @apply select-none;
+}
+
 @utility mainWrapper {
   @apply w-dvw px-3 h-dvh rounded relative flex justify-center;
 }
@@ -15,9 +19,13 @@
 }
 
 @utility cookieWrapper-text {
-  @apply text-xs text-gray-300;
+  @apply text-xs text-black;
 }
 
 @utility cookie-spin {
   animation: spin 30s linear infinite;
+}
+
+@utility options-icons {
+  @apply w-3;
 }
