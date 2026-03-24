@@ -1,73 +1,142 @@
-# React + TypeScript + Vite
+# 🍪 Cookie Clicker (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeña aplicación tipo **idle game / incremental** desarrollada con **React, TypeScript y Vite**, donde el usuario acumula clics (cookies) y puede exportar/importar su progreso.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Demo
 
-## React Compiler
+> [Try me](https://cookie-clicker-alpha-two.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Descripción
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Este proyecto simula la mecánica básica de un **Cookie Clicker**:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Cada clic incrementa un contador
+* Se almacena el estado actual (clics + timestamp)
+* Permite exportar e importar el progreso del usuario
+* Manejo de estado con Context API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧰 Tecnologías utilizadas
+
+* ⚛️ React
+* ⚡ Vite
+* 🟦 TypeScript
+* 🎨 TailwindCSS
+* 🧩 Context API
+
+---
+
+## 📦 Instalación
+
+```bash
+git clone https://github.com/tw1ttt3r/cookie_clicker.git
+cd cookie_clicker
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ▶️ Ejecución
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+yarn run dev
 ```
+
+Abrir en navegador:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🏗️ Estructura del proyecto
+
+```
+src/
+│
+├── components/        # Componentes UI
+├── config/context/    # Contexto global (cookies / storage)
+├── config/hooks/      # Hooks personalizados
+├── config/helpers/    # Helpers (export/import JSON, etc.)
+└── main.tsx           # Entry point
+```
+
+---
+
+## 💾 Funcionalidades principales
+
+### 🍪 Contador de clics
+
+* Incremento manual de cookies
+* Registro de último clic (timestamp)
+
+---
+
+### 📤 Exportar progreso
+
+Permite descargar el estado actual en formato JSON:
+
+```json
+{
+  "accumulated": 120,
+  "lastAccumulated": 1774393525
+}
+```
+
+---
+
+### 📥 Importar progreso
+
+Permite cargar un archivo JSON previamente exportado para restaurar el estado.
+
+---
+
+## 🧪 Scripts disponibles
+
+```bash
+yarn run dev       # Desarrollo
+yarn run build     # Build de producción
+yarn run preview   # Preview del build
+```
+
+---
+
+## ⚠️ Notas técnicas
+
+* El import de archivos se realiza mediante:
+
+  * `<input type="file">`
+* El export se realiza usando:
+
+  * Blob + descarga o `file-saver`
+* La persistencia puede extenderse a:
+
+  * localStorage
+
+---
+
+## 🚧 Posibles mejoras
+
+* 💾 Autosave con localStorage
+* 📈 Sistema de upgrades (multiplicadores)
+* ⏱️ Generación automática de cookies
+* 📱 Mejor UI/UX
+* 🌙 Dark mode
+
+---
+
+## 🧑‍💻 Autor
+
+Desarrollado por **tw1ttt3r**
+
+---
+
+## 📄 Licencia
+
+MIT
