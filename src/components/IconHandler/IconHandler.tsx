@@ -1,7 +1,25 @@
-import { BrushCleaning, Download, Rocket, Settings, Upload } from "lucide-react"
+import {
+  BrushCleaning,
+  Download,
+  Rocket,
+  Settings,
+  Upload,
+  Info,
+  Code,
+  User
+} from "lucide-react"
 
 type IconHandlerProps = {
-  icon: 'download' | 'upload' | 'settings' | 'download' | 'rocket' | 'brushcleaning',
+  icon: 
+    'download' | 
+    'upload' | 
+    'settings' | 
+    'download' | 
+    'rocket' | 
+    'brushcleaning' | 
+    'information' | 
+    'code' |
+    'user',
   className?: string,
   handler?: () => void
 }
@@ -15,6 +33,9 @@ const IconHandler = ({ icon, className = '', handler }: IconHandlerProps) => {
       { icon === 'upload' && <Upload className={className} /> }
       { icon === 'brushcleaning' && <BrushCleaning className={className} /> }
       { icon === 'rocket' && <Rocket className={className} /> }
+      { icon === 'information' && <Info className={className} /> }
+      { icon === 'code' && <Code className={className} /> }
+      { icon === 'user' && <User className={className} /> }
     </>
   )
 }
