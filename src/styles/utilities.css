@@ -2,16 +2,16 @@
   @apply select-none;
 }
 
+body {
+  @apply bg-[url(/plato.png)] bg-center bg-no-repeat;
+}
+
 @utility mainWrapper {
   @apply w-dvw px-3 h-dvh rounded relative flex justify-center;
 }
 
-@utility mainWrapper-2nd-level {
-  @apply border bg-amber-600;
-}
-
 @utility version {
-  @apply absolute p-0.5 flex justify-center bottom-2 right-2;
+  @apply p-0.5 flex justify-center;
 }
 
 @utility cookieWrapper {
@@ -28,4 +28,8 @@
 
 @utility options-icons {
   @apply w-3;
+}
+
+@utility options-list-item {
+  @apply flex gap-1 justify-between items-center;
 }
