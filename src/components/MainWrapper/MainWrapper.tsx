@@ -12,7 +12,7 @@ function MainWrapper({ children }: MainWrapperType) {
   const context = useContext(CookieContext)
 
   if (!context) {
-    throw new Error("CookieContext no está disponible")
+    throw new Error('CookieContext no está disponible')
   }
 
   const { loadStorage, saveStorage } = context
@@ -23,12 +23,13 @@ function MainWrapper({ children }: MainWrapperType) {
 
   useEffect(() => {
     loadStorage()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
-    <main className="mainWrapper">
+    <main className='mainWrapper'>
       <section
-        className="mobile:min-w-20 mobile:max-w-140 tablet:min-w-160 tablet:max-w-170 desktop:max-w-270 desktop:min-w-260 xxl:max-w-300 xxl:mix-w-290"
+        className='mobile:min-w-20 mobile:max-w-140 tablet:min-w-160 tablet:max-w-170 desktop:max-w-270 desktop:min-w-260 xxl:max-w-300 xxl:mix-w-290'
       >
         <Options />
         { children }

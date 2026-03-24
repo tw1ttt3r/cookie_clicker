@@ -5,7 +5,7 @@ const useModalContext = () => {
   const context = useContext(ModalContext)
 
   if (!context) {
-    throw new Error("useModalContext must be used within a ModalShadowProvider")
+    throw new Error('useModalContext must be used within a ModalShadowProvider')
   }
 
   return context

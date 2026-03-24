@@ -8,11 +8,11 @@ function Cookie() {
   const handlerClic = () => registerAccumulated()
 
   return(
-    <div className="cookieWrapper">
+    <div className='cookieWrapper'>
       <img
         onClick={handlerClic}
         src={cookie}
-        className="mobile:w-[65%] tablet:w-[60%] desktop:w-[50%] cookie-spin cursor-pointer"
+        className='mobile:w-[65%] tablet:w-[60%] desktop:w-[50%] cookie-spin cursor-pointer'
       />
     </div>
   )
