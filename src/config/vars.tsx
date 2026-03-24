@@ -1,13 +1,15 @@
 import { version } from "@/package.json"
 
-const local_storage = import.meta.env.VITE_COOKIE_DATA
-const filename = import.meta.env.VITE_FILENAME
-const filetype = import.meta.env.VITE_FILETYPE
-const filetagtype = import.meta.env.VITE_FILE_TAG_TYPE
-const filesupporttype = import.meta.env.VITE_FILE_SUPPORT_TYPE
-const filetag = import.meta.env.VITE_FILE_TAG
-const sitedev = import.meta.env.VITE_SITE_DEV
-const repo = import.meta.env.VITE_REPO
+const {
+  VITE_COOKIE_DATA: local_storage,
+  VITE_FILENAME: filename,
+  VITE_FILETYPE: filetype,
+  VITE_FILE_TAG_TYPE: filetagtype,
+  VITE_FILE_SUPPORT_TYPE: filesupporttype,
+  VITE_FILE_TAG: filetag,
+  VITE_SITE_DEV: sitedev,
+  VITE_REPO: repo
+} = import.meta.env
 
 export {
   version,
