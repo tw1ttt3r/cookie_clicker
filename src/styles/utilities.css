@@ -19,7 +19,7 @@ body {
 }
 
 @utility cookieWrapper-text {
-  @apply text-xs text-black;
+  @apply text-sm text-black;
 }
 
 @utility cookie-spin {
@@ -27,7 +27,7 @@ body {
 }
 
 @utility options-icons {
-  @apply w-3;
+  @apply w-4;
 }
 
 @utility options-list-item {

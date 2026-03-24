@@ -5,7 +5,7 @@ const useCookieContext = () => {
   const context = useContext(CookieContext)
 
   if (!context) {
-    throw new Error("useCookieContext must be used within a CookieProvider")
+    throw new Error('useCookieContext must be used within a CookieProvider')
   }
 
   return context

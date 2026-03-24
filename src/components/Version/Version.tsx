@@ -1,9 +1,14 @@
 import { version } from "@_config/vars"
+import { cn } from "@_config/helpers/cn"
 
-function Version() {
+type VersionProps = {
+  className?: string
+}
+
+function Version({ className = '' }: VersionProps) {
   return (
-    <div className="version">
-      <span className="cookieWrapper-text">v{ version }</span>
+    <div className='version'>
+      <span className={cn('cookieWrapper-text', className)}>v{ version }</span>
     </div>
   )
 }
