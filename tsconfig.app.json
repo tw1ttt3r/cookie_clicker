@@ -28,7 +28,8 @@
       "@/*": ["./*"],
       "@src/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-      "@_config/*": ["./src/config/*"]
+      "@_config/*": ["./src/config/*"],
+      "@Modals/*": ["./src/components/Modal/*"]
     },
     "resolveJsonModule": true
   },
