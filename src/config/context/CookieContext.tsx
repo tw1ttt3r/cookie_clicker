@@ -48,9 +48,9 @@ const CookieProvider = ({ children }: CookieProviderType) => {
     }
     
     const { accumulated, lastAccumulated } = 
-      JSON.parse(localStorage.getItem(local_storage)!);
+      JSON.parse(localStorage.getItem(local_storage)!)
 
-    setAccumulated(accumulated);
+    setAccumulated(accumulated)
     setLastAccumulated(lastAccumulated)
   }
 
@@ -73,7 +73,7 @@ const CookieProvider = ({ children }: CookieProviderType) => {
     
     const blob = new Blob([JSON.stringify(JSON.parse(localStorage.getItem(local_storage)!), null, 2)], {
       type: (filetype as string),
-    });
+    })
   
     saveAs(blob, (filename as string))
   }
@@ -83,15 +83,15 @@ const CookieProvider = ({ children }: CookieProviderType) => {
     f.type = filetagtype
     f.accept = filesupporttype
     f.onchange = async (event: Event) => {
-      const target = event.target as HTMLInputElement;
-      const file = target.files?.[0];
+      const target = event.target as HTMLInputElement
+      const file = target.files?.[0]
   
       if (!file) {
         return;
       }
  
-      const text = await file.text();
-      const { accumulated, lastAccumulated } = JSON.parse(text);
+      const text = await file.text()
+      const { accumulated, lastAccumulated } = JSON.parse(text)
   
       setAccumulated(accumulated)
       setLastAccumulated(lastAccumulated)
