@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from "react"
 
 export function useBeforeClose(callback: () => void) {
   useEffect(() => {
@@ -6,10 +6,10 @@ export function useBeforeClose(callback: () => void) {
       callback();
     };
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
+    window.addEventListener("beforeunload", handleBeforeUnload)
 
     return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
+      window.removeEventListener("beforeunload", handleBeforeUnload)
     };
-  }, [callback]);
+  }, [callback])
 }

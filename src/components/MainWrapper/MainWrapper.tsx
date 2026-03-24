@@ -12,7 +12,7 @@ function MainWrapper({ children }: MainWrapperType) {
   const context = useContext(CookieContext)
 
   if (!context) {
-    throw new Error("CookieContext no está disponible");
+    throw new Error("CookieContext no está disponible")
   }
 
   const { loadStorage, saveStorage } = context
